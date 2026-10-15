@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Documentos|Testes Back End</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="conceitos.css">
+</head>
+<body>
+  <header class="topo text-center text-white py-4">
+    <h1>Testes Back End</h1>
+    <p class="mb-0">Qualidade de software começa nos bastidores</p>
+  </header>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="TesteBackEnd.html">Documentos e Casos</a></li>
+          <li class="nav-item"><a class="nav-link" href="Execucao.html">Execução e Controle</a></li>
+          <li class="nav-item"><a class="nav-link" href="conceitos.html">Resultados e Equipe</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main class="container my-4">
+    <section id="documentos">
+      <h2>A) Documentos de Testes</h2>
+      <div class="row g-3">
+        <article class="col-md-6 col-lg-3"><div class="card h-100 cartao"><div class="card-body">
+          <h3 class="h5">1. Plano de Teste</h3>
+          <p>Define <strong>o que</strong>, <strong>como</strong>, <strong>quando</strong> e <strong>quem</strong> vai testar: escopo, riscos, cronograma e ferramentas.</p>
+        </div></div></article>
+        <article class="col-md-6 col-lg-3"><div class="card h-100 cartao"><div class="card-body">
+          <h3 class="h5">2. Casos de Teste</h3>
+          <p>Passo a passo de cada teste, com dados de entrada e o resultado esperado.</p>
+        </div></div></article>
+        <article class="col-md-6 col-lg-3"><div class="card h-100 cartao"><div class="card-body">
+          <h3 class="h5">3. Relatório de Incidentes</h3>
+          <p>Registra cada defeito encontrado: descrição, gravidade, evidências e status.</p>
+        </div></div></article>
+        <article class="col-md-6 col-lg-3"><div class="card h-100 cartao"><div class="card-body">
+          <h3 class="h5">4. Relatório de Resumo</h3>
+          <p>Mostra o resultado final: quantos testes passaram, falharam e se o sistema pode ser liberado.</p>
+        </div></div></article>
+      </div>
+      <figure class="text-center mt-4">
+        <img src="https://placehold.co/800x300/0d6efd/ffffff?text=Documentos+de+Teste" class="img-fluid rounded" alt="Ilustração dos documentos de teste">
+        <figcaption class="text-muted">Figura 1 - Documentos do processo de teste (troque pela sua imagem)</figcaption>
+      </figure>
+    </section>
+
+    <section id="caso-de-teste" class="mt-5">
+      <h2>B) Elaboração do Caso de Teste</h2>
+      <article>
+        <h3>Conceito</h3>
+        <p>Caso de teste é um conjunto de <strong>condições, dados de entrada e resultados esperados</strong> criado para verificar se uma funcionalidade do sistema está correta.</p>
+        <h3>Exemplo: Login de usuário (API Back End)</h3>
+        <div class="table-responsive">
+          <table class="table table-striped table-bordered">
+            <caption>Tabela 1 - Casos de teste do login</caption>
+            <thead class="table-primary">
+              <tr><th>ID</th><th>Descrição</th><th>Entrada</th><th>Resultado esperado</th><th>Resultado obtido</th><th>Status</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>CT01</td><td>Login válido</td><td>admin / 123456</td><td>Status 200 e token</td><td>Status 200 e token</td><td><span class="badge bg-success">Passou</span></td></tr>
+              <tr><td>CT02</td><td>Senha incorreta</td><td>admin / 000</td><td>Status 401</td><td>Status 401</td><td><span class="badge bg-success">Passou</span></td></tr>
+              <tr><td>CT03</td><td>Campos vazios</td><td>(vazio)</td><td>Status 400</td><td>Status 500</td><td><span class="badge bg-danger">Falhou</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+      <aside class="alert alert-info">💡 <strong>Dica:</strong> um bom caso de teste tem ID, objetivo, pré-condições, passos, dados e resultado esperado.</aside>
+    </section>
+  </main>
+  <footer class="bg-dark text-white text-center py-3 mt-4">
+    <p class="mb-0">&copy; 2026 - Trabalho de Testes Back End | Feito com HTML, CSS e Bootstrap</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
